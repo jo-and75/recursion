@@ -7,8 +7,8 @@ def merge_sort(arr,result = [])
   right_arr = arr.drop(mid)  
 
   sorted_left_arr = merge_sort(left_arr) 
-  sorted_right_arr = merge_sort(right_arr)  
-
+  sorted_right_arr = merge_sort(right_arr)   
+  
   while [sorted_left_arr,sorted_right_arr].none?(&:empty?)
     if sorted_left_arr[0] < sorted_right_arr[0] 
       result << sorted_left_arr.shift 
